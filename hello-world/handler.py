@@ -26,7 +26,8 @@ def translate_text(text, target='en'):
 
 
 def hello(event, context):
-    credentials = os.environ.get("GOOGLE_APPLICATION_CREDENTIALS")
+    credentials = os.environ.get("GOOGLE_APPLICATION_CREDENTIALS", "key")
+    # something to do with credentials
 
     example_text = "Hola amigos"
     translation = translate_text(example_text, target='en')

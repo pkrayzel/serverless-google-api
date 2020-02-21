@@ -26,6 +26,22 @@ pip install -r hello-world/requirements.txt
 
 ## Deployment to AWS
 
+If you have configured AWS credentials in **~/.aws/credentials** then you can just run:
+
 ```
 serverless deploy
 ```
+
+Otherwise you can specify the credentials using:
+
+``` 
+serverless config credentials --provider aws --key 1234 --secret 5678
+```
+
+Then you should be able to run
+
+```
+serverless deploy
+```
+
+See https://serverless.com/framework/docs/providers/aws/cli-reference/config-credentials/
